@@ -1,0 +1,230 @@
+<html>
+<head>
+    <title>1  Ticket</title>
+<style>
+body {
+background-image: url("ktm.jpg");
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+.dj{
+text-align:center;
+text-decoration:underline overline;
+font-size: 50px;
+}
+p {
+color:white;
+font-size: 20px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-style: outset;
+  border:4px solid white;
+}
+
+td{
+  border: 2px solid white;
+  text-align: center;
+  padding: 50px;
+} 
+.butto {
+  background-color: black;
+  border: outset;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  cursor: pointer;
+  position: relative; left:105px; top: -1px;
+}
+.button {
+  background-color: black;
+  border: outset;
+  color: white;
+  padding: 10px 37px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  cursor: pointer;
+  position: relative; left:995px; top:-800px;
+}
+.btn {
+  background-color: black;
+  border: outset;
+  color: white;
+  padding: 10px 37px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  cursor: pointer;
+  position: relative; left:-280px; top:-1px;
+}
+.n {
+font-size:25px;
+}
+</style>
+</head>
+<body>
+    <p class="dj"> 1 ticket </p> 
+	<p class="n" id="demo"></p>
+    <table>
+        <tr>
+            <td><p id="11"></p></td>
+            <td><p id="12"></p></td>
+            <td><p id="13"></p></td>
+            <td><p id="14"></p></td>
+            <td><p id="15"></p></td>
+            <td><p id="16"></p></td>
+            <td><p id="17"></p></td>
+            <td><p id="18"></p></td>
+            <td><p id="19"></p></td>
+        </tr>
+        <tr>
+            <td><p id="21"></p></td>
+            <td><p id="22"></p></td>
+            <td><p id="23"></p></td>
+            <td><p id="24"></p></td>
+            <td><p id="25"></p></td>
+            <td><p id="26"></p></td>
+            <td><p id="27"></p></td>
+            <td><p id="28"></p></td>
+            <td><p id="29"></p></td>
+        </tr>
+        <tr>
+            <td><p id="31"></p></td>
+            <td><p id="32"></p></td>
+            <td><p id="33"></p></td>
+            <td><p id="34"></p></td>
+            <td><p id="35"></p></td>
+            <td><p id="36"></p></td>
+            <td><p id="37"></p></td>
+            <td><p id="38"></p></td>
+            <td><p id="39"></p></td>
+        </tr>
+    </table>
+
+    <button class="butto" onclick="location.reload();">Regenerate Ticket</button>
+    <button id="clicker" class="button" onclick="myFunction()"></button>
+	<button class="btn" onclick="myFunctio()">Exit</button>
+<script>
+function myFunctio() {
+window.open("tambola.html","_self");
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+            crossorigin="anonymous">
+</script>
+    <script>
+        $(document).ready(function () {
+		    var rns = generateRandom();
+            assignRandom(1, rns);
+            assignRandom(2, rns);
+            assignRandom(3, rns);
+			window.alert("Wait for 5 seconds to Generate Numbers");
+        });
+
+        function assignRandom(i, rns) {
+            var counter = 1;
+            for (var counter = 1; counter < rns.length; counter++) {
+                $("#" + i + (Math.floor(Math.random() * 90) + 1)).html(rns[counter]);
+            }
+        }
+
+        function generateRandom() {
+		
+		var array = [];
+		
+		while(array.length < 90){
+		var r = Math.floor(Math.random() * 90) + 1;
+		if(array.indexOf(r) === -1) array.push(r);
+		}
+		return array;
+		}
+    </script>
+
+    <script>
+        function mya() {
+            document.getElementById("a").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function myb() {
+            document.getElementById("b").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function myc() {
+            document.getElementById("c").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function myd() {
+            document.getElementById("d").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function mye() {
+            document.getElementById("e").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function myf() {
+            document.getElementById("f").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function myg() {
+            document.getElementById("g").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function myh() {
+            document.getElementById("h").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function myi() {
+            document.getElementById("i").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function myj() {
+            document.getElementById("j").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function myk() {
+            document.getElementById("k").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function myl() {
+            document.getElementById("l").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+        function mym() {
+            document.getElementById("m").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+
+    </script>
+    <script>
+        function disableButton(btn) {
+            document.getElementById(btn.id).disabled = true;
+            alert("Ticket Generated.");
+        }
+    </script>
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML =
+            Math.floor(Math.random() * 90) + 1;
+        }
+    </script>
+	<script>
+	var button = document.getElementById("clicker");
+	setInterval (function() {
+	button.click()
+	},5000)
+	</script>
+	
+</body>
+</html>
